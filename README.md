@@ -1,6 +1,7 @@
 ### Hi there 👋
 
-**Arc-Data/Arc-Data** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I aspire to be a skilled back end developer. I am currently invested in learning Javascript and React skills so that I can be capable of 
+creating nice looking interfaces when im ready to focus my attention to Back End Development entirely.
 
 Here are some ideas to get you started:
 
