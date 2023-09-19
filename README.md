@@ -1,8 +1,9 @@
 ### Hi there 👋
 
-I aspire to be a skilled back end developer. I am currently invested in learning Javascript and React skills so 
-that I can be capable of creating nice looking interfaces when im ready to focus my attention to Back End Development entirely.
+Currently in my 4th year of College, working on our Itinerary Recommender Project in order to graduate. 
+I am constantly seeking improvement and I mainly use Django and Javascript and I aim to become more proficient in the latter. 
+My goal is to become a Backend Web Developer who can occassionally do Frontend stuff if needed. 
 
-- 🔭 I’m currently working on my JavaScript skills, following The Odin Project's Full Stack Javascript Course
+- 🔭 I’m currently working on our Itinerary Recommender Project.
 - 😄 Pronouns: He/Him
 - ⚡ Fun fact: I dream of being able to live in Japan
