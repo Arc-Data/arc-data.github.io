@@ -35,6 +35,7 @@ const Home = () => {
                     <h2 className="text-xl">About Me</h2>
                     <p className="mt-3">I am a 4th-year college student expecting to graduate in a semester after OJT/Internships. I learned about HTML and CSS back when I was in grade 9 and that made me interested in programming in general. I had grown up to love knowing all the nerdy stuff, like a kid who discovers a manual for a potential lego masterpiece.</p>
                     <p className="mt-3">Fast forward to where I am right now, I am looking forward to contribute for the better and to continually improve.</p>
+                    <button className="bg-cyan-500 rounded px-4 py-3 mt-6">Contact Me</button>
                     <button className="bg-cyan-500 rounded px-4 py-3 mt-6">Download CV</button>
                 </div>
             </div>
