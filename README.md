@@ -7,4 +7,4 @@ Looking forward to learning NodeJs in the meantime.
 
 - 🔭 I’m currently working on our Itinerary Recommender Project.
 - 😄 Pronouns: He/Him
-- ⚡ Fun fact: I dream of being able to live in Japan
+- ⚡ Fun fact: Also working on my Japanese language studies in my free time. 
