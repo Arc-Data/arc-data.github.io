@@ -12,7 +12,7 @@ const Home = () => {
             <div className="md:flex md:justify-between md:gap-10">
                 <header className="text-center md:text-left md:sticky md:top-0 md:flex md:flex-col md:max-h-screen md:w-1/3 md:pt-20">
                     <div>
-                        <h1 className="text-6xl font-bold md:text-4xl lg:text-5xl text-cyan-400">Arc</h1>
+                        <h1 className="text-6xl font-bold text-blue-500 md:text-4xl lg:text-5xl">Arc</h1>
                         <p className="overflow-hidden text-lg md:mt-3 text-slate-400">I Build Full Stack Web Applications.</p>
                         <p className="h-10 text-lg text-slate-600 md:mt-3">Graduating from College Soon</p>
                         <nav className="hidden mt-3 md:block">
@@ -44,11 +44,11 @@ const Home = () => {
                 <main className="flex flex-col gap-40 pt-12 mt-20 text-sm md:mt-0 md:w-2/3 md:flex-1 md:text-left">
                     <div className="grid gap-8 text-slate-200" id="section1">
                         <h2 className="text-xl font-bold text-center uppercase md:text-left text-slate-500">About Me</h2>
-                        <p className="max-w-[400px] px-[1rem] indent-8 md:max-w-full mx-auto text-justify mt-3 text-sm leading-8 md:px-0 md:leading-8 md:text-base ">I am a 4th-year college student expecting to graduate in a semester after OJT/Internships. I learned about HTML and CSS back when I was in grade 9 and that made me interested in programming in general. I had grown up to love knowing all the nerdy stuff, like a kid who discovers a manual for a potential lego masterpiece.</p>
-                        <p className="max-w-[400px] px-[1rem] mx-auto md:px-0 md:max-w-full text-justify mt-3 text-sm leading-8 md:leading-8 md:text-base indent-8">Fast forward to where I am right now, I am looking forward to contribute for the better and to continually improve.</p>
+                        <p className="px-[1.5rem] indent-8 md:max-w-full mx-auto text-justify mt-3 text-sm leading-8 md:px-0 md:leading-8 md:text-base ">I am a 4th-year college student expecting to graduate in a semester after OJT/Internships. I learned about HTML and CSS back when I was in grade 9 and that made me interested in programming in general. I had grown up to love knowing all the nerdy stuff, like a kid who discovers a manual for a potential lego masterpiece.</p>
+                        <p className="px-[1.5rem] mx-auto md:px-0 md:max-w-full text-justify mt-3 text-sm leading-8 md:leading-8 md:text-base indent-8">Fast forward to where I am right now, I am looking forward to contribute for the better and to continually improve.</p>
                         <div className="flex justify-center gap-4 md:justify-start">
                             <button className="px-4 py-3 mt-6 bg-transparent border border-white rounded">Contact Me</button>
-                            <button className="px-4 py-3 mt-6 rounded bg-cyan-500">Download CV</button>
+                            <button className="px-4 py-3 mt-6 bg-blue-800 rounded hover:bg-blue-700">Download CV</button>
                         </div>
                     </div>
                     <div className="grid gap-4 leading-relaxed text-slate-600" id="section2">
