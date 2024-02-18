@@ -9,8 +9,8 @@ const Home = () => {
 
     return (
         <div className="max-w-screen-xl min-h-screen px-6 py-12 mx-auto text-white md:px-12 md:py-20 sm:text-center md:text-left">
-            <div className="md:flex md:justify-between md:gap-10">
-                <header className="text-center md:text-left md:sticky md:top-0 md:flex md:flex-col md:max-h-screen md:w-1/3 md:pt-20">
+            <div className="md:flex md:justify-between md:gap-20">
+                <header className="pt-20 text-center md:text-left md:sticky md:top-20 md:flex md:flex-col md:max-h-screen md:w-1/4 ">
                     <div>
                         <h1 className="text-6xl font-bold text-blue-500 md:text-4xl lg:text-5xl">Arc</h1>
                         <p className="overflow-hidden text-lg md:mt-3 text-slate-400">I Build Full Stack Web Applications.</p>
@@ -22,11 +22,7 @@ const Home = () => {
                             </button>
                             <button onClick={() => scrollIntoView("section2")} className="flex items-center gap-2 px-2 py-3">
                                 <span className="w-4 h-2 bg-blue-800 rounded"></span> 
-                                <p className="uppercase">About Me</p>
-                            </button>
-                            <button  onClick={() => scrollIntoView("section3")} className="flex items-center gap-2 px-2 py-3">
-                                <span className="w-4 h-2 bg-blue-800 rounded"></span> 
-                                <p className="uppercase">About Me</p>
+                                <p className="uppercase">Projects</p>
                             </button>
                         </nav>
                     </div>
@@ -41,21 +37,42 @@ const Home = () => {
                         </div>
                     </div>
                 </header>
-                <main className="flex flex-col gap-40 pt-12 mt-20 text-sm md:mt-0 md:w-2/3 md:flex-1 md:text-left">
-                    <div className="grid gap-8 text-slate-200" id="section1">
+                <main className="flex flex-col *:px-[1.5rem] gap-40 mt-10 text-sm md:w-3/4 md:flex-1 md:text-left">
+                    <div className="grid gap-8 py-10 text-slate-200" id="section1">
                         <h2 className="text-xl font-bold text-center uppercase md:text-left text-slate-500">About Me</h2>
-                        <p className="px-[1.5rem] indent-8 md:max-w-full mx-auto text-justify mt-3 text-sm leading-8 md:px-0 md:leading-8 md:text-base ">I am a 4th-year college student expecting to graduate in a semester after OJT/Internships. I learned about HTML and CSS back when I was in grade 9 and that made me interested in programming in general. I had grown up to love knowing all the nerdy stuff, like a kid who discovers a manual for a potential lego masterpiece.</p>
-                        <p className="px-[1.5rem] mx-auto md:px-0 md:max-w-full text-justify mt-3 text-sm leading-8 md:leading-8 md:text-base indent-8">Fast forward to where I am right now, I am looking forward to contribute for the better and to continually improve.</p>
+                        <p className="px-[1.5rem] indent-8 md:max-w-full mx-auto text-justify mt-3 text-sm leading-8 md:px-0 md:leading-8 md:text-base ">
+                            I am a 4th-year college student expecting to graduate in a semester after OJT/Internships. I learned about HTML and CSS back when I was in grade 9 and that made me interested in programming in general. I had grown up to love knowing all the nerdy stuff, like a kid who discovers a manual for a potential lego masterpiece. 
+                            I am looking forward to contribute to the community.
+                        </p>
+                        <p className="px-[1.5rem] mx-auto md:px-0 md:max-w-full text-justify mt-3 text-sm leading-8 md:leading-8 md:text-base indent-8">
+                            Outside of programming, my interests lie in anime, light novels and visual novels, and I have been studying Japanese language in my free time.
+                        </p>
                         <div className="flex justify-center gap-4 md:justify-start">
                             <button className="px-4 py-3 mt-6 bg-transparent border border-white rounded">Contact Me</button>
                             <button className="px-4 py-3 mt-6 bg-blue-800 rounded hover:bg-blue-700">Download CV</button>
                         </div>
                     </div>
-                    <div className="grid gap-4 leading-relaxed text-slate-600" id="section2">
-                        <h2 className="text-xl">Projects</h2>
-                        <div>Section under construction...</div>
+                    <div className="py-10 text-base text-slate-200" id="section2">
+                        <h2 className="text-xl font-bold text-center uppercase md:text-left text-slate-500">Featured Projects</h2>
+                        <div className="grid mt-4 *:py-4">
+                            <div>
+                                <div className="grid px-4 py-6 rounded md:grid-cols-3 gap-x-5 gap-y-8 md:gap-y-8 hover:bg-slate-800 hover:cursor-pointer">
+                                    <img src="irs.png" alt="" className="object-cover col-span-3 rounded md:col-span-1"/>
+                                    <div className="col-span-3 md:col-span-2">
+                                        <h2 className="text-lg font-medium text-center md:text-left">Itinerary Recommendation System</h2>
+                                        <p className="mt-2 text-md">A travel planning website where interested travelers may create their own itinerary and also involves analyzing and matching user preferences to possible itineraries or recommended locations in Cebu. Capstone Research Project.</p>
+                                        <div className="flex flex-wrap justify-center gap-2 mt-6 md:justify-normal">
+                                            <div className="px-4 py-1 text-sm rounded-2xl bg-cyan-500">Django</div>
+                                            <div className="px-4 py-1 text-sm rounded-2xl bg-cyan-500">React</div>
+                                            <div className="px-4 py-1 text-sm rounded-2xl bg-cyan-500">OpenStreetMap</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="text-right">View All</div>
                     </div>
-                    
                 </main>
             </div>
         </div>
