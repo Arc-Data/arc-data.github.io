@@ -15,7 +15,7 @@ const Home = () => {
     useEffect(() => {
         const fetchArticles = async () => {
             try {
-                const response = await strapi.get('projects?populate=*&IsFeatured=true')
+                const response = await strapi.get('api/projects?populate=*&IsFeatured=true')
                 setProjects(response.data.data)
             }
             catch(error) {
