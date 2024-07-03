@@ -24,6 +24,9 @@ jobs:
 
       - name: Build project
         run: npm run build
+        env:
+          VITE_STRAPI_URL: ${{ secrets.VITE_STRAPI_URL }}
+          VITE_STRAPI_TOKEN: ${{ secrets.VITE_STRAPI_TOKEN }}
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
