@@ -90,7 +90,7 @@ const Home = () => {
                                 <Timeline.Time>April 2024 - July 2024</Timeline.Time>
                                 <Timeline.Title className="text-primary-default">Web Developer Intern at Lamina Studios</Timeline.Title>
                                 <Timeline.Body>
-                                    Contributed in the making of a Logistics Management System. Designed the initial database structure
+                                    Contributed in the making of a Logistics Management System. Designed the initial database structure as well as its authentication features using Vue + Laravel
                                 </Timeline.Body>
                                 </Timeline.Content>
                             </Timeline.Item>
