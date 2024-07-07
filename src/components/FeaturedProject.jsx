@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const FeaturedProject = ({ project }) => {
   const thumbnailUrl = `${project.attributes.Header.data.attributes.formats.thumbnail.url}`;
   const smallUrl = `${project.attributes.Header.data.attributes.formats.small.url}`;
@@ -6,7 +8,7 @@ const FeaturedProject = ({ project }) => {
   const technologies = project.attributes.technologies
 
   return (
-    <div key={project.id} className="grid px-4 py-6 rounded group md:grid-cols-3 gap-x-5 gap-y-8 md:gap-y-8 hover:bg-slate-800 hover:cursor-pointer">
+    <Link to={`/projects/${project.id}`} key={project.id} className="grid px-4 py-6 rounded group md:grid-cols-3 gap-x-5 gap-y-8 md:gap-y-8 hover:bg-slate-800 hover:cursor-pointer">
       <div className="flex justify-center col-span-3 md:col-span-1 md:block">
         <img
           src={thumbnailUrl}
@@ -27,7 +29,7 @@ const FeaturedProject = ({ project }) => {
           })}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
