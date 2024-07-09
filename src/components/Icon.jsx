@@ -3,7 +3,6 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { SiDjango, SiStrapi } from "react-icons/si";
 
 const Icon = ({icon, size=24}) => {
-    console.log(icon )
     switch (icon) {
         case 'React': 
             return (<FaReact size={size} aria-label="React"/>)

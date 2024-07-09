@@ -8,6 +8,7 @@ export const PageProvider = ({ children }) => {
     const [ title, setTitle ] = useState("Arc")
     const [ subtitle, setSubtitle ] = useState("I Build Full Stack Web Applications")
     const [ showStack, setShowStack ] = useState(false)
+    const [ project, setProject ] = useState()
     const [ stack, setStack ] = useState([])
 
     const showProjectDetails = (project) => {
@@ -33,6 +34,8 @@ export const PageProvider = ({ children }) => {
         setShowStack,
         showProjectDetails,
         defaultScreenDetails,
+        project,
+        setProject
     }
 
     return (

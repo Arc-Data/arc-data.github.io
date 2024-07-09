@@ -2,15 +2,13 @@ import { useContext, useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import strapi from "../utils/strapi"
 import { Spinner } from "flowbite-react"
-import IconTray from "../components/IconTray"
 import PageContext from "../context/PageContext"
 
 const ProjectDetail = () => {
     const [loading, setLoading] = useState(true)
-    const [project, setProject] = useState(null)
     const { id } = useParams()
 
-    const { setTitle, showProjectDetails } = useContext(PageContext)
+    const { project, setProject, showProjectDetails } = useContext(PageContext)
 
     useEffect(() => {
         const fetchProject = async () => {
@@ -69,7 +67,7 @@ const ProjectDetail = () => {
                 <Spinner className="mt-20 size-20"/>
             </div>
             :
-            <div className="flex flex-col w-full gap-4 mt-4">
+            <div className="flex flex-col w-full gap-4 mt-8">
                 <img
                     src={project?.Header?.data?.attributes?.formats?.large?.url}
                     // srcSet={`
