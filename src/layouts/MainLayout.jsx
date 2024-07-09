@@ -1,14 +1,34 @@
+import { useContext } from "react"
 import { Link, Outlet } from "react-router-dom"
+import PageContext from "../context/PageContext"
+import Icon from "../components/Icon"
 
 const MainLayout = () => {
+    const { title, stack, showStack } = useContext(PageContext)
+
+
+
     return (
         <div className="max-w-screen-xl min-h-screen px-6 py-4 mx-auto text-white md:px-12 md:pt-20 sm:text-center md:text-left">
             <div className="md:flex md:justify-between md:gap-20">
                 <header className="pt-20 text-center md:text-left md:sticky md:top-20 md:flex md:flex-col md:max-h-screen md:w-1/4 ">
                     <div>
-                        <h1 className="text-6xl font-bold text-primary-default md:text-4xl lg:text-6xl">Arc</h1>
-                        <p className="mt-3 overflow-hidden text-lg text-primary-default">I Build Full Stack Web Applications.</p>
-                        <p className="h-10 mt-3 text-lg text-text-700">Graduating from College Soon</p>
+                        <h1 className="text-3xl font-bold text-primary-default md:text-3xl lg:text-4xl">{title}</h1>
+                        {/* <p className="mt-3 overflow-hidden text-lg text-primary-default">I Build Full Stack Web Applications.</p> */}
+                        {/* <p className="h-10 mt-3 text-lg text-text-700">Graduating from College Soon</p> */}
+                        {showStack && 
+                        <div className="flex flex-wrap justify-center gap-2 mt-4 md:justify-normal md:max-w-80">
+                            {stack.map(item => {
+                                console.log(item.attributes)
+                                return (
+                                    <div key={item.id} className="flex items-center gap-2 px-2 text-sm rounded bg-primary-800 ">
+                                        <Icon icon={item.attributes.name} size={12} />
+                                        <p>{item.attributes.name}</p>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                        }
                         <nav className="hidden mt-3 md:grid *:w-full  *:border-blue-500 *:rounded md:gap-2">
                             {/* <button onClick={() => scrollIntoView("section1")} className="flex items-center gap-2 px-2 py-3 group hover:bg-accent-default">
                                 <span className="w-4 h-2 rounded bg-secondary-default group-hover:w-8 group-hover:bg-white"></span> 

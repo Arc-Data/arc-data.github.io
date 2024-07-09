@@ -1,16 +1,18 @@
 import { Timeline, TimelinePoint } from "flowbite-react"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import strapi from "../utils/strapi"
 import FeaturedProject from "../components/FeaturedProject"
+import PageContext from "../context/PageContext"
 
 const Home = () => {
     const [projects, setProjects] = useState([])
+    const { defaultScreenDetails } = useContext(PageContext)
 
-    const scrollIntoView = (sectionId) => {
-        const section = document.getElementById(sectionId)
-        section.scrollIntoView({ behavior: 'smooth'})
-    }
+    // const scrollIntoView = (sectionId) => {
+    //     const section = document.getElementById(sectionId)
+    //     section.scrollIntoView({ behavior: 'smooth'})
+    // }
 
     useEffect(() => {
         const fetchArticles = async () => {
@@ -22,7 +24,7 @@ const Home = () => {
                 console.log(error)
             }
         }
-
+        defaultScreenDetails()
         fetchArticles()
     }, [])
 

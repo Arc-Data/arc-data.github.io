@@ -1,21 +1,26 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import strapi from "../utils/strapi"
 import { Spinner } from "flowbite-react"
 import IconTray from "../components/IconTray"
+import PageContext from "../context/PageContext"
 
 const ProjectDetail = () => {
     const [loading, setLoading] = useState(true)
     const [project, setProject] = useState(null)
     const { id } = useParams()
 
-    console.log(project)
+    const { setTitle, showProjectDetails } = useContext(PageContext)
 
     useEffect(() => {
         const fetchProject = async () => {
             try {
                 const response = await strapi.get(`/api/projects/${id}?populate=*`)
                 setProject(response.data.data.attributes)
+                // setTitle(response.data.data.attributes.Title)
+                // setStack(response.data.data.attributes.technologies)
+                // setShowStack(response.data)
+                showProjectDetails(response.data.data.attributes)
             } catch (error) {
                 console.log("An error occurred: ", error)
             } finally {
@@ -76,7 +81,7 @@ const ProjectDetail = () => {
                     alt=""
                     className="object-cover border-2 border-gray-300 rounded group-hover:border-cyan-500"
                 />
-                <IconTray technologies={project.technologies} />
+                {/* <IconTray technologies={project.technologies} /> */}
             </div>
             }
             
