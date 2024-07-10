@@ -12,7 +12,7 @@ export const PageProvider = ({ children }) => {
     const [ stack, setStack ] = useState([])
 
     const showProjectDetails = (project) => {
-        setTitle(project.Title)
+        setTitle(project.title)
         setStack(project.technologies.data)
         setShowStack(true)
     }

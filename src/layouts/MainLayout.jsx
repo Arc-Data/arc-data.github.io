@@ -9,8 +9,6 @@ dayjs.extend(RelativeTime)
 const MainLayout = () => {
     const { project, title, stack, showStack } = useContext(PageContext)
     
-    console.log(project)
-    
     return (
         <div className="max-w-screen-xl min-h-screen px-6 py-4 mx-auto text-white md:px-12 md:pt-20 sm:text-center md:text-left">
             <div className="md:flex md:justify-between md:gap-20">
@@ -29,6 +27,13 @@ const MainLayout = () => {
                                         </div>
                                     )
                                 })}
+                            </div>
+                            <div className="grid justify-center gap-2 md:justify-normal">
+                                {project.links.data.map((link) => (
+                                    <a href={link.attributes.url} target="_blank" className="px-5 py-2.5 w-60 flex gap-2 items-center rounded-lg bg-background-800 border border-background-950 hover:bg-accent-default" key={link.id}>
+                                        <Icon icon={"Github"} size={16}/>
+                                        <span className="text-sm">Link to {link.attributes.name}</span></a>
+                                ))}
                             </div>
                             <div className="text-xs text-background-400">Article Last Updated: {dayjs(project.updatedAt).fromNow()}</div>
                         </div>

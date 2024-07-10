@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom"
 import strapi from "../utils/strapi"
 import { Spinner } from "flowbite-react"
 import PageContext from "../context/PageContext"
+import { BlocksRenderer } from "@strapi/blocks-react-renderer"
 
 const ProjectDetail = () => {
     const [loading, setLoading] = useState(true)
@@ -15,9 +16,6 @@ const ProjectDetail = () => {
             try {
                 const response = await strapi.get(`/api/projects/${id}?populate=*`)
                 setProject(response.data.data.attributes)
-                // setTitle(response.data.data.attributes.Title)
-                // setStack(response.data.data.attributes.technologies)
-                // setShowStack(response.data)
                 showProjectDetails(response.data.data.attributes)
             } catch (error) {
                 console.log("An error occurred: ", error)
@@ -28,6 +26,8 @@ const ProjectDetail = () => {
 
         fetchProject()
     }, [id])
+
+    console.log(project)
 
     return (
         <div>
@@ -56,7 +56,7 @@ const ProjectDetail = () => {
                             </svg>
                             {loading ? 
                                 <Spinner /> :
-                                <span className="text-sm font-medium text-gray-500 ms-1 md:ms-2 dark:text-gray-400">{project?.Title}</span>
+                                <span className="text-sm font-medium text-gray-500 ms-1 md:ms-2 dark:text-gray-400">{project?.title}</span>
                             }
                         </div>
                     </li>
@@ -67,19 +67,19 @@ const ProjectDetail = () => {
                 <Spinner className="mt-20 size-20"/>
             </div>
             :
-            <div className="flex flex-col w-full gap-4 mt-8">
+            <div className="flex flex-col w-full gap-4 mt-8 text-lg leading-8 text-text-200 ">
                 <img
-                    src={project?.Header?.data?.attributes?.formats?.large?.url}
+                    src={project?.header?.data?.attributes?.formats?.large.url}
                     // srcSet={`
-                    //     ${project?.Header?.data?.attributes?.formats?.thumbnail?.url} 245w, 
-                    //     ${project?.Header?.data?.attributes?.formats?.small?.url} 500w, 
-                    //     ${project?.Header?.data?.attributes?.formats?.medium?.url} 750w, 
-                    //     ${project?.Header?.data?.attributes?.formats?.large?.url} 1000w`}
+                    //     ${project?.header?.data?.attributes?.formats?.thumbnail?.url} 245w, 
+                    //     ${project?.header?.data?.attributes?.formats?.small?.url} 500w, 
+                    //     ${project?.header?.data?.attributes?.formats?.medium?.url} 750w, 
+                    //     ${project?.header?.data?.attributes?.formats?.large?.url} 1000w`}
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                     alt=""
                     className="object-cover border-2 border-gray-300 rounded group-hover:border-cyan-500"
                 />
-                {/* <IconTray technologies={project.technologies} /> */}
+                <BlocksRenderer content={project.description}/>
             </div>
             }
             

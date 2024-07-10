@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
 const FeaturedProject = ({ project }) => {
-const thumbnailUrl = `${project.attributes.Header.data.attributes.formats.thumbnail.url}`;
-const smallUrl = `${project.attributes.Header.data.attributes.formats.small.url}`;
-const mediumUrl = `${project.attributes.Header.data.attributes.formats.medium.url}`;
-const largeUrl = `${project.attributes.Header.data.attributes.formats.large.url}`;
+const thumbnailUrl = `${project.attributes.header.data.attributes.formats.thumbnail.url}`;
+const smallUrl = `${project.attributes.header.data.attributes.formats.small.url}`;
+const mediumUrl = `${project.attributes.header.data.attributes.formats.medium.url}`;
+const largeUrl = `${project.attributes.header.data.attributes.formats.large.url}`;
 const technologies = project.attributes.technologies
 
 return (
@@ -19,8 +19,8 @@ return (
 		/>
 	</div>
 	<div className="col-span-3 md:col-span-2">
-		<h2 className="text-lg font-medium text-center group-hover:text-primary-default md:text-left">{project.attributes.Title}</h2>
-		<p className="mt-2 text-md">{project.attributes.Summary}</p>
+		<h2 className="text-lg font-medium text-center group-hover:text-primary-default md:text-left">{project.attributes.title}</h2>
+		<p className="mt-2 text-md">{project.attributes.summary}</p>
 		<div className="flex flex-wrap justify-center gap-2 mt-4 md:justify-start">
 		{technologies.data.map((tech) => {
 			return (
