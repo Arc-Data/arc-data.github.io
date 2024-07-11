@@ -38,7 +38,7 @@ const Home = () => {
             <>
             <div className="grid gap-8 text-text-default" id="section1">
                 <h2 className="text-xl font-bold text-center uppercase md:text-left text-text-800">About Me</h2>
-                <p className="px-[1.5rem] indent-8 md:max-w-full mx-auto text-justify mt-3 text-sm leading-8 md:px-0 md:leading-8 md:text-base ">
+                <p className="mx-auto mt-3 text-sm leading-8 text-justify indent-8 md:max-w-full md:px-0 md:leading-8 md:text-base ">
                     I am a 4th year college student set to graduate around October. I am passionate about learning and building web technologies. I see web development as a field that lets me apply my passion for learning almost immediately and is incredibly rewarding for that fact alone. I am incredibly confident in my skills at the following:    
                 </p>
                 <div className="">
@@ -82,7 +82,7 @@ const Home = () => {
                         <BiCaretRight />
                     </div>
                 </div>
-                <p className="px-[1.5rem] mx-auto md:px-0 md:max-w-full text-justify mt-3 text-sm leading-8 md:leading-8 md:text-base indent-8">
+                <p className="mx-auto mt-3 text-sm leading-8 text-justify md:px-0 md:max-w-full md:leading-8 md:text-base indent-8">
                     Outside of programming, I play DOTA, I watch anime, and I a read light novels and visual novels. I am also studying a bit of the Japanese language in my free time to potentially fuel my hobbies.
                 </p>
                 <div className="flex justify-center gap-4 md:justify-start">

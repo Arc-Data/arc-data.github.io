@@ -8,7 +8,7 @@ const largeUrl = `${project.attributes.header.data.attributes.formats.large.url}
 const technologies = project.attributes.technologies
 
 return (
-	<Link to={`/projects/${project.id}`} key={project.id} className="grid px-4 py-6 rounded group md:grid-cols-3 gap-x-5 gap-y-8 md:gap-y-8 hover:bg-slate-800 hover:cursor-pointer">
+	<Link to={`/projects/${project.id}`} key={project.id} className="grid py-6 rounded group md:grid-cols-3 gap-x-5 gap-y-8 md:gap-y-8 hover:bg-slate-800 hover:cursor-pointer">
 	<div className="flex justify-center col-span-3 md:col-span-1 md:block">
 		<img
 		src={thumbnailUrl}
@@ -18,7 +18,7 @@ return (
 		className="object-cover border-2 border-gray-300 rounded group-hover:border-cyan-500"
 		/>
 	</div>
-	<div className="col-span-3 md:col-span-2">
+	<div className="col-span-3 leading-8 text-md md:col-span-2">
 		<h2 className="text-lg font-medium text-center group-hover:text-primary-default md:text-left">{project.attributes.title}</h2>
 		<p className="mt-2 text-md">{project.attributes.summary}</p>
 		<div className="flex flex-wrap justify-center gap-2 mt-4 md:justify-start">

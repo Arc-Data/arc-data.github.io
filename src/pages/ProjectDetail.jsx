@@ -66,7 +66,7 @@ const ProjectDetail = () => {
                 <Spinner className="mt-20 size-20"/>
             </div>
             :
-            <div className="flex flex-col w-full gap-4 mt-8 text-lg leading-8 text-text-200 ">
+            <div className="flex flex-col w-full gap-4 mt-8 text-lg leading-8 text-text-default ">
                 <img
                     src={project?.header?.data?.attributes?.formats?.large.url}
                     // srcSet={`
