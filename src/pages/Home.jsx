@@ -33,12 +33,10 @@ const Home = () => {
             <div className="grid gap-8 py-10 text-slate-200" id="section1">
                 <h2 className="text-xl font-bold text-center uppercase md:text-left text-text-800">About Me</h2>
                 <p className="px-[1.5rem] indent-8 md:max-w-full mx-auto text-justify mt-3 text-sm leading-8 md:px-0 md:leading-8 md:text-base ">
-                    I am a 4th-year college student expecting to graduate on October. I am very much motivated to improving my craft and I know my way around learning new technologies. 
-                    I mainly use ReactJS, Django and Tailwind, and also had experience using Laravel and Vue
+                    I am a 4th year college student set to graduate around October. I am passionate about learning and building web technologies. I see web development as a field that lets me apply my passion for learning almost immediately and is incredibly rewarding for that fact alone.    
                 </p>
-                
                 <p className="px-[1.5rem] mx-auto md:px-0 md:max-w-full text-justify mt-3 text-sm leading-8 md:leading-8 md:text-base indent-8">
-                    Outside of programming, my interests lie in anime, light novels and visual novels, and I have been studying Japanese language in my free time.
+                    Outside of programming, I play DOTA, I watch anime, and I a read light novels and visual novels. I am also studying a bit of the Japanese language in my free time to fuel my hobbies.
                 </p>
                 <div className="flex justify-center gap-4 md:justify-start">
                     <button className="px-8 py-2.5 mt-6 rounded shadow-xl bg-secondary-default hover:border-cyan-500">Contact Me</button>
