@@ -4,6 +4,12 @@ import { Link } from "react-router-dom"
 import strapi from "../utils/strapi"
 import FeaturedProject from "../components/FeaturedProject"
 import PageContext from "../context/PageContext"
+import { SiCss3, SiGithub, SiJavascript, SiTailwindcss } from "react-icons/si"
+import { DiCss3, DiDjango, DiFirebase, DiHtml5, DiJavascript, DiLaravel, DiReact } from "react-icons/di"
+import { FaReact, FaVuejs } from "react-icons/fa"
+import { BsBootstrap } from "react-icons/bs"
+import { RiFirebaseFill } from "react-icons/ri"
+import { BiCaretRight } from "react-icons/bi"
 
 const Home = () => {
     const [projects, setProjects] = useState([])
@@ -30,20 +36,62 @@ const Home = () => {
 
     return (
             <>
-            <div className="grid gap-8 py-10 text-slate-200" id="section1">
+            <div className="grid gap-8 text-text-default" id="section1">
                 <h2 className="text-xl font-bold text-center uppercase md:text-left text-text-800">About Me</h2>
                 <p className="px-[1.5rem] indent-8 md:max-w-full mx-auto text-justify mt-3 text-sm leading-8 md:px-0 md:leading-8 md:text-base ">
-                    I am a 4th year college student set to graduate around October. I am passionate about learning and building web technologies. I see web development as a field that lets me apply my passion for learning almost immediately and is incredibly rewarding for that fact alone.    
+                    I am a 4th year college student set to graduate around October. I am passionate about learning and building web technologies. I see web development as a field that lets me apply my passion for learning almost immediately and is incredibly rewarding for that fact alone. I am incredibly confident in my skills at the following:    
                 </p>
+                <div className="">
+                    
+                    <div className="grid justify-between grid-cols-4 gap-2">
+                        <div className="flex flex-col gap-2 p-2 text-xs border rounded place-items-center">
+                            <DiHtml5 size={24}/>
+                            <p>HTML</p>
+                        </div>
+                        <div className="flex flex-col gap-2 p-2 text-sm border rounded place-items-center">
+                            <SiCss3 size={24}/>
+                            <p>CSS</p>
+                        </div>
+                        <div className="flex flex-col gap-2 p-2 text-sm border rounded place-items-center">
+                            <SiJavascript size={24}/>
+                            <p>JavaScript</p>
+                        </div>
+                        <div className="flex flex-col gap-2 p-2 text-sm border rounded place-items-center">
+                            <FaReact size={24}/>
+                            <p>React</p>
+                        </div>
+                        <div className="flex flex-col gap-2 p-2 text-sm border rounded place-items-center">
+                            <SiTailwindcss size={24}/>
+                            <p>Tailwind</p>
+                        </div>
+                        <div className="flex flex-col gap-2 p-2 text-sm border rounded place-items-center">
+                            <DiDjango size={24}/>
+                            <p>Django</p>
+                        </div>
+                        <div className="flex flex-col gap-2 p-2 text-sm border rounded place-items-center">
+                            <DiLaravel size={24}/>
+                            <p>Laravel</p>
+                        </div>
+                        <div className="flex flex-col gap-2 p-2 text-sm border rounded place-items-center">
+                            <SiGithub size={24}/>
+                            <p>Github</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center justify-end mt-2 text-accent-default">
+                        <span>Show All </span> 
+                        <BiCaretRight />
+                    </div>
+                </div>
                 <p className="px-[1.5rem] mx-auto md:px-0 md:max-w-full text-justify mt-3 text-sm leading-8 md:leading-8 md:text-base indent-8">
-                    Outside of programming, I play DOTA, I watch anime, and I a read light novels and visual novels. I am also studying a bit of the Japanese language in my free time to fuel my hobbies.
+                    Outside of programming, I play DOTA, I watch anime, and I a read light novels and visual novels. I am also studying a bit of the Japanese language in my free time to potentially fuel my hobbies.
                 </p>
                 <div className="flex justify-center gap-4 md:justify-start">
                     <button className="px-8 py-2.5 mt-6 rounded shadow-xl bg-secondary-default hover:border-cyan-500">Contact Me</button>
                     <button className="px-8 py-2.5 mt-6 rounded text-background-default bg-primary-default hover:shadow-primary-default hover:shadow-2xl">Download CV</button>
                 </div>
             </div>
-            <div className="py-10 text-base text-slate-200" id="section2">
+            
+            <div className="py-10 text-base text-text-default" id="section2">
                 <h2 className="text-xl font-bold text-center uppercase md:text-left text-text-800">Featured Projects</h2>
                 <div className="grid mt-4 *:py-4">
                     <div>

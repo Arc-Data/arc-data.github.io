@@ -4,6 +4,7 @@ import PageContext from "../context/PageContext"
 import dayjs from "dayjs"
 import RelativeTime from "dayjs/plugin/relativeTime"
 import Icon from "../components/Icon"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 dayjs.extend(RelativeTime)
 const MainLayout = () => {
@@ -41,32 +42,21 @@ const MainLayout = () => {
                         <div>
                             <p className="mt-3 overflow-hidden text-lg text-primary-default">I Build Full Stack Web Applications.</p>
                             <p className="h-10 mt-3 text-lg text-text-700">Graduating from College Soon</p>
-                            <div className="justify-center hidden gap-4 mt-4 md:flex md:mt-16 md:flex-col">
-                                <Link to="https://github.com/Arc-Data" className="flex items-center gap-4">
-                                    <i className="fa-brands fa-github fa-lg"></i>
-                                    <p className="hidden md:block">Github</p>
-                                </Link>
-                                <Link to="https://www.linkedin.com/in/marc-stephen-gabres-5b04712b3/" className="flex items-center gap-4">
-                                <i className="fa-brands fa-linkedin-in fa-lg"></i>
-                                    <p className="hidden md:block">LinkedIn</p>
-                                </Link>
+                            <div className="flex justify-center gap-2 mt-4 md:flex-col md:mt-24">
+                                <a href="https://github.com/Arc-Data" target="_blank" className="flex items-center gap-2 rounded-lg px-5 py-2.5 bg-background-800 border border-background-950 hover:bg-accent-default">
+                                    <FaGithub size={16} />
+                                    <p>Github</p>
+                                </a>
+                                <a href="https://www.linkedin.com/in/marc-stephen-gabres-5b04712b3/" target="_blank" className="flex items-center gap-2 rounded-lg px-5 py-2.5 bg-background-800 border border-background-950 hover:bg-accent-default">
+                                    <FaLinkedin size={16} />
+                                    <p>LinkedIn</p>
+                                </a>
                             </div>
                         </div>
                         }
-                        <nav className="hidden mt-3 md:grid *:w-full  *:border-blue-500 *:rounded md:gap-2">
-                            {/* <button onClick={() => scrollIntoView("section1")} className="flex items-center gap-2 px-2 py-3 group hover:bg-accent-default">
-                                <span className="w-4 h-2 rounded bg-secondary-default group-hover:w-8 group-hover:bg-white"></span> 
-                                <p className="uppercase">About Me</p>
-                            </button>
-                            <button onClick={() => scrollIntoView("section2")} className="flex items-center gap-2 px-2 py-3 group hover:bg-accent-default">
-                                <span className="w-4 h-2 transition ease-in-out rounded bg-secondary-default delay-10 group-hover:w-8 group-hover:bg-white"></span> 
-                                <p className="uppercase">Projects</p>
-                            </button> */}
-                        </nav>
                     </div>
-                    
                 </header>
-                <main className="flex flex-col *:px-[1.5rem] gap-40 mt-10 text-sm md:w-3/4 md:flex-1 md:text-left">
+                <main className="flex flex-col *:px-[1.5rem] gap-40 mt-10 text-sm md:w-3/4 md:flex-1 md:text-left text-text-default">
                     <Outlet />
                 </main>
             </div>
