@@ -27,7 +27,6 @@ const ProjectDetail = () => {
         fetchProject()
     }, [id])
 
-    console.log(project)
 
     return (
         <div>

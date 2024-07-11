@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom"
 import Home from './pages/Home'
 import ProjectDetail from "./pages/ProjectDetail"
 import MainLayout from "./layouts/MainLayout"
@@ -6,7 +6,7 @@ import { PageProvider } from "./context/PageContext"
 
 function App() {
 	return (
-		<BrowserRouter>
+		<HashRouter>
 		<PageProvider>
 			<Routes>
 				<Route element={<MainLayout />}>
@@ -15,7 +15,7 @@ function App() {
 				</Route>
 			</Routes>
 		</PageProvider>
-		</BrowserRouter>
+		</HashRouter>
 	)
 }
 
