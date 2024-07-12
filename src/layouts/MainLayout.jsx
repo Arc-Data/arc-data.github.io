@@ -5,6 +5,7 @@ import dayjs from "dayjs"
 import RelativeTime from "dayjs/plugin/relativeTime"
 import Icon from "../components/Icon"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { BsArrowUpRight } from "react-icons/bs"
 
 dayjs.extend(RelativeTime)
 const MainLayout = () => {
@@ -41,15 +42,20 @@ const MainLayout = () => {
                         :
                         <div>
                             <p className="mt-3 overflow-hidden text-lg text-primary-default">I Build Full Stack Web Applications.</p>
-                            <p className="h-10 mt-3 text-lg text-text-700">Graduating from College Soon</p>
+                            <div className="flex justify-center gap-2 mt-4 md:justify-start">
+                                <button className="px-8 py-2.5 text-sm rounded shadow-xl bg-secondary-default hover:bg-secondary-500">Contact Me</button>
+                                <button className="px-8 py-2.5  text-sm rounded text-background-default bg-primary-default hover:shadow-primary-default hover:shadow-2xl">Download CV</button>
+                            </div>
                             <div className="flex justify-center gap-2 mt-4 md:flex-col md:mt-24">
-                                <a href="https://github.com/Arc-Data" target="_blank" className="flex items-center gap-2 rounded-lg px-5 py-2.5 bg-background-800 border border-background-950 hover:bg-accent-default">
+                                <a href="https://github.com/Arc-Data" target="_blank" className="flex items-center gap-2 rounded-lg px-5 py-2.5   hover:bg-accent-default">
                                     <FaGithub size={16} />
                                     <p>Github</p>
+                                    <BsArrowUpRight size={12}/>
                                 </a>
-                                <a href="https://www.linkedin.com/in/marc-stephen-gabres-5b04712b3/" target="_blank" className="flex items-center gap-2 rounded-lg px-5 py-2.5 bg-background-800 border border-background-950 hover:bg-accent-default">
+                                <a href="https://www.linkedin.com/in/marc-stephen-gabres-5b04712b3/" target="_blank" className="flex items-center gap-2 rounded-lg px-5 py-2.5  hover:bg-accent-default">
                                     <FaLinkedin size={16} />
                                     <p>LinkedIn</p>
+                                    <BsArrowUpRight size={12} />
                                 </a>
                             </div>
                         </div>

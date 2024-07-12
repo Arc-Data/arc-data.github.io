@@ -39,10 +39,10 @@ const Home = () => {
             <div className="grid gap-8 text-text-default" id="section1">
                 <h2 className="text-xl font-bold text-center uppercase md:text-left text-text-800">About Me</h2>
                 <p className="mx-auto mt-3 text-sm leading-8 text-justify indent-8 md:max-w-full md:px-0 md:leading-8 md:text-base ">
-                    I am a 4th year college student set to graduate around October. I am passionate about learning and building web technologies. I see web development as a field that lets me apply my passion for learning almost immediately and is incredibly rewarding for that fact alone. I am incredibly confident in my skills at the following:    
+                    <span className="text-xl text-accent-default">Approach problem-solving </span>with <span className="text-xl text-accent-default">enthusiasm</span> and <span className="text-xl text-accent-default">passion! </span>  
+                    I like building web technologies with the intention of being able to see myself as a fan or a consumer of it. <span className="text-xl text-accent-default">No cutting corners</span>, and aim to <span className="text-xl text-accent-default">deliver the best website experience possible</span>.  
+                    {/* see web development as a field that lets me leverage and apply my passion for learning almost immediately. I am incredibly confident in my skills at the following:     */}
                 </p>
-                <div className="">
-                    
                     <div className="grid justify-between grid-cols-4 gap-2">
                         <div className="flex flex-col gap-2 p-2 text-xs border rounded place-items-center">
                             <DiHtml5 size={24}/>
@@ -81,14 +81,13 @@ const Home = () => {
                         <span>Show All </span> 
                         <BiCaretRight />
                     </div>
-                </div>
                 <p className="mx-auto mt-3 text-sm leading-8 text-justify md:px-0 md:max-w-full md:leading-8 md:text-base indent-8">
-                    Outside of programming, I play DOTA, I watch anime, and I a read light novels and visual novels. I am also studying a bit of the Japanese language in my free time to potentially fuel my hobbies.
+                    Outside of programming, I'm quite the reader and a Japanese media enthusiast. Plays a bit of DOTA and learns a bit of Nihongo on the side!
                 </p>
-                <div className="flex justify-center gap-4 md:justify-start">
+                {/* <div className="flex justify-center gap-4 md:justify-start">
                     <button className="px-8 py-2.5 mt-6 rounded shadow-xl bg-secondary-default hover:border-cyan-500">Contact Me</button>
                     <button className="px-8 py-2.5 mt-6 rounded text-background-default bg-primary-default hover:shadow-primary-default hover:shadow-2xl">Download CV</button>
-                </div>
+                </div> */}
             </div>
             
             <div className="py-10 text-base text-text-default" id="section2">
