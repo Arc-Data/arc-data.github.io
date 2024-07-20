@@ -4,6 +4,7 @@ import strapi from "../utils/strapi"
 import { Spinner } from "flowbite-react"
 import PageContext from "../context/PageContext"
 import { BlocksRenderer } from "@strapi/blocks-react-renderer"
+import { BsImage } from "react-icons/bs"
 
 const ProjectDetail = () => {
     const [loading, setLoading] = useState(true)
@@ -54,16 +55,24 @@ const ProjectDetail = () => {
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
                             </svg>
                             {loading ? 
-                                <Spinner /> :
-                                <span className="text-sm font-medium text-gray-500 ms-1 md:ms-2 dark:text-gray-400">{project?.title}</span>
+                            <Spinner className="ml-4"/> 
+                            :
+                            <span className="text-sm font-medium text-gray-500 ms-1 md:ms-2 dark:text-gray-400">{project?.title}</span>
                             }
                         </div>
                     </li>
                 </ol>
             </nav>
             { loading ? 
-            <div className="grid w-full mt-4 place-items-center">
-                <Spinner className="mt-20 size-20"/>
+            <div className="grid w-full mt-8 animate-pulse">
+                <div className="grid w-full h-96 place-items-center bg-background-800 ">
+                    <BsImage size={32}/>
+                </div>  
+                {/* <div className="w-64 h-8 mt-4 bg-background-800 "></div> */}
+                <div className="w-full h-4 mt-12 ml-8 rounded-lg bg-background-800 "></div>
+                <div className="w-full h-4 mt-4 rounded-lg bg-background-800 "></div>
+                <div className="w-full h-4 mt-4 rounded-lg bg-background-800 "></div>
+                <div className="w-64 h-4 mt-4 rounded-lg bg-background-800 "></div>
             </div>
             :
             <div className="flex flex-col w-full gap-4 mt-8 text-lg leading-8 text-text-default ">

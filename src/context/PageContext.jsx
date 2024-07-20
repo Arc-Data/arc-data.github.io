@@ -10,17 +10,22 @@ export const PageProvider = ({ children }) => {
     const [ showStack, setShowStack ] = useState(false)
     const [ project, setProject ] = useState()
     const [ stack, setStack ] = useState([])
+    const [ loading, setLoading ] = useState(true)
 
     const showProjectDetails = (project) => {
+        setLoading(true)
         setTitle(project.title)
         setStack(project.technologies.data)
         setShowStack(true)
+        setLoading(false)
     }
 
     const defaultScreenDetails = () => {
+        setLoading(true)
         setTitle("Arc")
         setSubtitle("I Build Full Stack Web Apps")
         setShowStack(false)
+        setLoading(false)
     }
 
     const contextData = {
@@ -35,7 +40,8 @@ export const PageProvider = ({ children }) => {
         showProjectDetails,
         defaultScreenDetails,
         project,
-        setProject
+        setProject,
+        loading
     }
 
     return (
