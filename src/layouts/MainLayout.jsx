@@ -11,7 +11,7 @@ import { Modal } from "flowbite-react"
 dayjs.extend(RelativeTime)
 const MainLayout = () => {
     const { project, title, stack, showStack } = useContext(PageContext)
-    const [ openModal, setOpenModal ] = useState(true)
+    const [ openModal, setOpenModal ] = useState(false)
 
     return (
         <div className="max-w-screen-xl min-h-screen px-6 py-4 mx-auto text-white md:px-12 md:pt-20 sm:text-center md:text-left">
