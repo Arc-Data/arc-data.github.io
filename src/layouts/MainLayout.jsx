@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { Link, Outlet } from "react-router-dom"
 import PageContext from "../context/PageContext"
 import dayjs from "dayjs"
@@ -6,11 +6,13 @@ import RelativeTime from "dayjs/plugin/relativeTime"
 import Icon from "../components/Icon"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { BsArrowUpRight } from "react-icons/bs"
+import { Modal } from "flowbite-react"
 
 dayjs.extend(RelativeTime)
 const MainLayout = () => {
     const { project, title, stack, showStack } = useContext(PageContext)
-    
+    const [ openModal, setOpenModal ] = useState(true)
+
     return (
         <div className="max-w-screen-xl min-h-screen px-6 py-4 mx-auto text-white md:px-12 md:pt-20 sm:text-center md:text-left">
             <div className="md:flex md:justify-between md:gap-20">
@@ -43,9 +45,33 @@ const MainLayout = () => {
                         <div>
                             <p className="mt-3 overflow-hidden text-lg text-primary-default">I Build Full Stack Web Applications.</p>
                             <div className="flex justify-center gap-2 mt-4 md:justify-start">
-                                <button className="px-8 py-2.5 text-sm rounded shadow-xl bg-secondary-default hover:bg-secondary-500">Contact Me</button>
+                                <button onClick={() => setOpenModal(true)} className="px-8 py-2.5 text-sm rounded shadow-xl bg-secondary-default hover:bg-secondary-500">Contact Me</button>
                                 <button className="px-8 py-2.5  text-sm rounded text-background-default bg-primary-default hover:shadow-primary-default hover:shadow-2xl">Download CV</button>
                             </div>
+                            <Modal dismissible size={'4xl'} show={openModal} onClose={() => setOpenModal(false)}>
+                                <Modal.Header className="border-none bg-background-800">
+                                    <p className="text-text-default">Contact Me</p>
+                                </Modal.Header>
+                                <Modal.Body className="grid gap-4 md:grid-cols-2 bg-background-800">
+                                    <p className="text-2xl text-text-default"> Get in touch. Let's build something great!</p>
+                                    <form action="https://formsubmit.co/8b8f9b2810dbf1f78d8b6db43cd4bc85" method="POST" className="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <label for="name" class="block mb-2 text-sm text-text-default font-medium">Name</label>
+                                            <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"   placeholder="John Doe" required />
+                                        </div>
+                                        <div>
+                                            <label for="email" class="block mb-2 text-sm text-text-default font-medium">Email</label>
+                                            <input type="text" id="email" name="email" class="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="johndoe@email.com" required />
+                                        </div>
+                                        <div className="col-span-2">
+                                            <label for="message" class="block mb-2 text-sm text-text-default font-medium">Your message</label>
+                                            <textarea id="message" name="message" rows="6" class="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Write your thoughts here..."></textarea>
+                                        </div>       
+                                        <button className="px-8 py-2.5 text-sm rounded shadow-xl bg-secondary-default hover:bg-secondary-500 text-text-default col-span-2">Contact Me</button>
+                                    </form>
+                                </Modal.Body>
+                                <Modal.Footer className="border-none bg-background-800"></Modal.Footer>
+                            </Modal>
                             <div className="flex justify-center gap-2 mt-4 md:flex-col md:mt-24">
                                 <a href="https://github.com/Arc-Data" target="_blank" className="flex items-center gap-2 rounded-lg px-5 py-2.5   hover:bg-accent-default">
                                     <FaGithub size={16} />
