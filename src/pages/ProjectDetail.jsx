@@ -6,6 +6,19 @@ import PageContext from "../context/PageContext"
 import { BlocksRenderer } from "@strapi/blocks-react-renderer"
 import { BsImage } from "react-icons/bs"
 
+const blocks = {
+    paragraph: ({ children }) => <p className="leading-loose text-justify text-md indent-8">{children}</p>,
+    heading: ({ children }) => <h2 className="my-4 text-2xl text-bold">{children}</h2>,
+    list: ({children, format }) => {
+        switch(format) {
+            case 'unordered':
+                return <ul className="leading-loose list-decimal text-md">{children}</ul>
+            case 'ordered':
+                return <ol className="leading-loose list-disc text-md">{children}</ol>
+        }
+    }
+}
+
 const ProjectDetail = () => {
     const [loading, setLoading] = useState(true)
     const { id } = useParams()
@@ -55,7 +68,9 @@ const ProjectDetail = () => {
                     alt=""
                     className="object-cover border-2 border-gray-300 rounded group-hover:border-cyan-500"
                 />
-                <BlocksRenderer content={project.description}/>
+                <BlocksRenderer 
+                    blocks={blocks}
+                    content={project.description}/>
             </div>
             }
             
