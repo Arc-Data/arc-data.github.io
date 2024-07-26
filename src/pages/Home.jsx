@@ -153,20 +153,24 @@ const Home = () => {
                         <Timeline.Point />
                         <Timeline.Content>
                         <Timeline.Time>April 2024 - July 2024</Timeline.Time>
-                        <Timeline.Title className="text-primary-default">Web Developer Intern at Lamina Studios</Timeline.Title>
-                        <Timeline.Body>
-                            Contributed in the making of a Logistics Management System. Designed the initial database structure as well as its authentication features using Vue + Laravel
-                        </Timeline.Body>
+                        <div className="px-4 mt-4 border border-gray-800 border-dashed rounded"> 
+                            <Timeline.Title className="my-4 text-primary-default">Web Developer Intern at Lamina Studios</Timeline.Title>
+                            <Timeline.Body>
+                                Contributed in the making of a Logistics Management System. Designed the initial database structure as well as its authentication features using Vue + Laravel
+                            </Timeline.Body>
+                        </div>
                         </Timeline.Content>
                     </Timeline.Item>
                     <Timeline.Item>
                         <Timeline.Point />
                         <Timeline.Content>
                         <Timeline.Time>April 2024</Timeline.Time>
-                        <Timeline.Title className="text-primary-default">WriteUps</Timeline.Title>
-                        <Timeline.Body>
-                            Built a Social Media Website in order to learn the basics of Laravel. 
-                        </Timeline.Body>
+                        <div className="px-4 mt-4 border border-gray-800 border-dashed rounded"> 
+                            <Timeline.Title className="my-4 text-primary-default">WriteUps</Timeline.Title>
+                            <Timeline.Body>
+                                Built a Social Media Website in order to learn the basics of Laravel. 
+                            </Timeline.Body>
+                        </div>
                         </Timeline.Content>
                     </Timeline.Item>
 
@@ -174,10 +178,14 @@ const Home = () => {
                         <Timeline.Point />
                         <Timeline.Content>
                         <Timeline.Time>March 2024</Timeline.Time>
-                        <Timeline.Title className="text-primary-default">CebuRoute</Timeline.Title>
-                        <Timeline.Body>
-                            Technical Lead for a Capstone Project involving an Itinerary Recommendation System. 
-                        </Timeline.Body>
+                        <div className="px-4 mt-4 border border-gray-800 border-dashed rounded"> 
+                            <Timeline.Title className="my-4 text-primary-default">CebuRoute</Timeline.Title>
+                            <Timeline.Body>
+                                <p className="">
+                                Technical Lead for a Capstone Project involving an Itinerary Recommendation System. Learned more about content-based filtering recommendation systems, as well as first real experience with deployment services and first real big project in React. 
+                                </p>
+                            </Timeline.Body>
+                        </div>
                         </Timeline.Content>
                     </Timeline.Item>
                     </Timeline>
