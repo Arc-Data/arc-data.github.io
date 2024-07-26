@@ -12,9 +12,9 @@ const blocks = {
     list: ({children, format }) => {
         switch(format) {
             case 'unordered':
-                return <ul className="ml-8 leading-loose list-decimal text-md">{children}</ul>
+                return <ul className="ml-8 text-sm leading-7 list-decimal md:leading-loose md:text-md">{children}</ul>
             case 'ordered':
-                return <ol className="ml-8 leading-loose list-disc text-md">{children}</ol>
+                return <ol className="ml-8 text-sm leading-7 list-disc md:leading-loose md:text-md">{children}</ol>
         }
     }
 }
