@@ -16,13 +16,13 @@ const MainLayout = () => {
     return (
         <div>
             <div className="fixed flex w-full py-4 border-b border-background-900 z-1 bg-background-default">
-                <div className="container flex max-w-6xl gap-8 mx-auto text-sm ">
-                    <Link to="/" className="ml-auto">Home</Link>
+                <div className="container flex justify-center max-w-6xl gap-8 mx-auto text-sm md:justify-normal ">
+                    <Link to="/" className="md:ml-auto">Home</Link>
                     <div>Projects</div>
                     <div>About Me</div>
                 </div>
             </div>
-            <div className="max-w-screen-xl min-h-screen px-6 py-4 mx-auto text-white md:px-12 md:pt-20 sm:text-center md:text-left">
+            <div className="max-w-screen-xl min-h-screen px-0 py-4 mx-auto text-white md:px-12 md:pt-20 sm:text-center md:text-left">
                 <div className="md:flex md:justify-between md:gap-20">
                     <header className="pt-20 text-center md:text-left md:sticky md:top-20 md:flex md:flex-col md:max-h-screen md:w-1/4 ">
                         <div>
