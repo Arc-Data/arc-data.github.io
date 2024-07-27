@@ -7,6 +7,7 @@ import { SiCss3, SiGithub, SiJavascript, SiTailwindcss } from "react-icons/si"
 import {  DiDjango,  DiHtml5, DiJavascript, DiLaravel, DiReact } from "react-icons/di"
 import { FaReact } from "react-icons/fa"
 import { BiCaretRight } from "react-icons/bi"
+import { HiCalendar } from "react-icons/hi"
 
 const Home = () => {
     const [ projects, setProjects ] = useState([])
@@ -37,11 +38,11 @@ const Home = () => {
 
     return (
             <>
-            <div className="grid gap-8 text-text-default" id="section1">
-                <h2 className="text-xl font-bold text-center uppercase md:text-left text-text-800">About Me</h2>
+            <div className="space-y-8 text-text-default" id="section1">
+                <h2 className="text-xl text-center uppercase font-heading md:text-left text-text-800">About Me</h2>
                 <p className="mx-auto mt-3 text-sm leading-8 text-justify indent-8 md:max-w-full md:px-0 md:leading-8 md:text-base ">
-                    <span className="text-xl text-accent-default">Approach problem-solving </span>with <span className="text-xl text-accent-default">enthusiasm</span> and <span className="text-xl text-accent-default">passion! </span>  
-                    I like building web technologies with the intention of being able to see myself as a fan or a consumer of it. <span className="text-xl text-accent-default">No cutting corners</span>, and aim to <span className="text-xl text-accent-default">deliver the best website experience possible</span>.  
+                    <span className="text-lg text-accent-default">Approach problem-solving </span>with <span className="text-lg text-accent-default">enthusiasm</span> and <span className="text-lg text-accent-default">passion! </span>  
+                    I like building web technologies with the intention of being able to see myself as a fan or a consumer of it. <span className="text-lg text-accent-default">No cutting corners</span>, and aim to <span className="text-lg text-accent-default">deliver the best website experience possible</span>.  
                     {/* see web development as a field that lets me leverage and apply my passion for learning almost immediately. I am incredibly confident in my skills at the following:     */}
                 </p>
                 <div className="grid justify-between grid-cols-4 gap-2">
@@ -150,27 +151,26 @@ const Home = () => {
                 <h2 className="text-xl font-bold text-center uppercase md:text-left text-text-800">Developer History</h2>
                 <Timeline className="my-10">
                     
-                    
-                    <Timeline.Item>
-                        <Timeline.Point />
+                    <Timeline.Item >
+                        <Timeline.Point/>
                         <Timeline.Content>
                         <Timeline.Time>April 2024 - July 2024</Timeline.Time>
-                        <div className="px-4 mt-4 border border-gray-800 border-dashed rounded"> 
-                            <Timeline.Title className="my-4 text-primary-default">Web Developer Intern at Lamina Studios</Timeline.Title>
-                            <Timeline.Body>
+                        <div className="mt-4 border-gray-800 border-dashed rounded"> 
+                            <Timeline.Title className="my-4 text-base md:text-xl text-primary-default font-heading">Web Developer Intern at Lamina Studios</Timeline.Title>
+                            <Timeline.Body className="text-sm md:text-base text-text-default">
                                 <div>Learned more about projects from a real world perspective. Picked up Laravel and Vue</div>
-                                <div className="p-4 mt-4">
+                                <div className="mt-4 md:p-4">
                                     <Timeline className="mt-4">
 
                                         <Timeline.Item>
                                             <Timeline.Point />
                                             <Timeline.Content >
                                                 <Timeline.Time>May - July 2024</Timeline.Time>
-                                                <div className="p-4 my-4 border border-gray-800 border-dashed rounded">
-                                                    <Timeline.Title className="my-4 text-primary-default">Logistics System</Timeline.Title>
-                                                    <Timeline.Body className="space-y-8">
+                                                <div className="p-2 my-4 text-base border border-gray-800 border-dashed rounded md:py-8 md:px-6 bg-background-900">
+                                                    <Timeline.Title className="my-4 text-base md:text-xl font-heading text-primary-default">Logistics System</Timeline.Title>
+                                                    <Timeline.Body className="space-y-8 text-sm text-text-default md:text-base">
                                                         <div>Worked on a company project involving truck logistics. Heavily involved with the initial database structure as well as authentication related functions.</div>
-                                                        <p className="text-lg text-secondary-default">Key Experiences</p>
+                                                        <p className="text-md text-secondary-default">Key Experiences</p>
                                                         <div className="px-4 space-y-2 list-disc">
                                                             <li>Collaborated with other interns for the initial database structure</li>
                                                             <li>Heavily involved in managing authentication between differing user types, as well as using experience with tools from past projects to create a better user experience.</li>
@@ -184,11 +184,11 @@ const Home = () => {
                                             <Timeline.Point />
                                             <Timeline.Content >
                                                 <Timeline.Time>May 2024</Timeline.Time>
-                                                <div className="p-4 my-4 border border-gray-800 border-dashed rounded">
-                                                    <Timeline.Title className="my-4 text-primary-default">To Do List - Vue</Timeline.Title>
-                                                    <Timeline.Body className="space-y-8">
+                                                <div className="p-2 my-4 text-sm border border-gray-800 border-dashed rounded md:px-6 md:py-8 bg-background-900">
+                                                    <Timeline.Title className="my-4 text-base md:text-xl font-heading text-primary-default">To Do List - Vue</Timeline.Title>
+                                                    <Timeline.Body className="space-y-8 text-sm text-text-default md:text-base">
                                                         <div>Built a basic to-do list app in order to learn Vue and learned about theme switching using color palettes from RealTime Colors</div>
-                                                        <p className="text-lg text-secondary-default">Key Experiences</p>
+                                                        <p className="text-md text-secondary-default">Key Experiences</p>
                                                         <div className="px-4 space-y-2 list-disc">
                                                             <li>Picked up Vue for the first time.</li>
                                                             <li>Managed authentication contexts using Pinia.</li>
@@ -204,11 +204,11 @@ const Home = () => {
                                             <Timeline.Point />
                                             <Timeline.Content >
                                                 <Timeline.Time>April - May 2024</Timeline.Time>
-                                                <div className="p-4 my-4 border border-gray-800 border-dashed rounded">
-                                                    <Timeline.Title className="my-4 text-primary-default">WriteUps</Timeline.Title>
-                                                    <Timeline.Body className="space-y-8">
+                                                <div className="p-2 my-4 border border-gray-800 border-dashed rounded md:px-6 md:py-8 bg-background-900">
+                                                    <Timeline.Title className="my-4 text-base md:text-xl font-heading text-primary-default">WriteUps</Timeline.Title>
+                                                    <Timeline.Body className="space-y-8 text-sm text-text-default md:text-base">
                                                         <div>Built a Social Media Website to learn the basics of Laravel. Also learned about Realtime Notifications using Pusher API and utilizing Flowbite designs for better user interfaces. </div>
-                                                        <p className="text-lg text-secondary-default">Key Experiences</p>
+                                                        <p className="text-md text-secondary-default">Key Experiences</p>
                                                         <div className="px-4 space-y-2 list-disc">
                                                             <li>Picked up Laravel for the first time.</li>
                                                             <li>Actively used TailwindCSS for making responsive content.</li>
@@ -227,30 +227,18 @@ const Home = () => {
                         </div>
                         </Timeline.Content>
                     </Timeline.Item>
-                    {/* <Timeline.Item>
-                        <Timeline.Point />
-                        <Timeline.Content>
-                        <Timeline.Time>April 2024</Timeline.Time>
-                        <div className="px-4 mt-4 border border-gray-800 border-dashed rounded"> 
-                            <Timeline.Title className="my-4 text-primary-default">WriteUps</Timeline.Title>
-                            <Timeline.Body>
-                                Built a Social Media Website in order to learn the basics of Laravel. 
-                            </Timeline.Body>
-                        </div>
-                        </Timeline.Content>
-                    </Timeline.Item> */}
 
                     <Timeline.Item>
                         <Timeline.Point />
                         <Timeline.Content>
                         <Timeline.Time>May 2023 - March 2024</Timeline.Time>
-                        <div className="px-4 mt-4 border border-gray-800 border-dashed rounded"> 
-                            <Timeline.Title className="my-4 text-primary-default">CebuRoute</Timeline.Title>
-                            <Timeline.Body className="space-y-8">
+                        <div className="px-6 py-8 my-4 border border-gray-800 border-dashed rounded bg-background-900"> 
+                            <Timeline.Title className="my-4 text-base md:text-xl font-heading text-primary-default">CebuRoute</Timeline.Title>
+                            <Timeline.Body className="space-y-8 text-sm text-text-default md:text-base">
                                 <p className="">
                                 Technical Lead for a Capstone Project involving an Itinerary Recommendation System. Learned more about content-based filtering recommendation systems, as well as first real experience with deployment services and first real big project in React. 
                                 </p>
-                                <p className="text-lg text-secondary-default">Key Experiences</p>
+                                <p className="text-md text-secondary-default">Key Experiences</p>
                                 <div className="px-4 space-y-2 list-disc">
                                     <li>Taught groupmates to use Git and Github in order to collaborate code assignments. Gained more experience managing project repositories.</li>
                                     <li>Researched about content-based filtering systems and devised algorithms for different kinds of recommendation contexts.</li>

@@ -15,30 +15,33 @@ const MainLayout = () => {
 
     return (
         <div>
-            <div className="fixed z-10 flex w-full py-4 border-b border-background-900 bg-background-default">
+            {/* <div className="fixed z-10 flex w-full py-4 border-b border-background-900 bg-background-default">
                 <div className="container flex justify-center max-w-6xl gap-8 mx-auto text-sm md:justify-normal ">
                     <Link to="/" className="md:ml-auto">Home</Link>
                     <div>Projects</div>
                     <div>About Me</div>
                 </div>
-            </div>
+            </div> */}
             <div className="max-w-screen-xl min-h-screen px-0 py-4 mx-auto text-white md:px-12 md:pt-20 sm:text-center md:text-left">
                 <div className="md:flex md:justify-between md:gap-20">
-                    <header className="pt-20 text-center md:text-left md:sticky md:top-20 md:flex md:flex-col md:max-h-screen md:w-1/4 ">
-                        <div>
-                            <h1 className="text-3xl font-bold text-primary-default md:text-3xl lg:text-4xl">{title}</h1>
-                            
-                            {showStack ? 
-                            <div className="flex flex-col gap-10">
-                                <div className="flex flex-wrap justify-center gap-2 mt-4 md:justify-normal md:max-w-80">
-                                    {stack.map(item => {
-                                        return (
-                                            <div key={item.id} className="flex items-center gap-2 px-2 text-sm rounded bg-primary-800 ">
-                                                <Icon icon={item.attributes.name} size={12} />
-                                                <p>{item.attributes.name}</p>
-                                            </div>
-                                        )
-                                    })}
+                    <header className="px-4 pt-20 text-center md:px-0 md:text-left md:sticky md:top-20 md:flex md:flex-col md:max-h-screen md:w-1/4">
+                            {showStack ?
+                            <div className="space-y-8">
+                                <Link to="/" className="px-4 rounded-lg text-sm py-2.5 border border-transparent hover:border-accent-default hover:text-accent-default">Back</Link>
+                                <div>
+                                    <h1 className="text-3xl font-bold font-heading text-primary-default md:text-2xl">{title}</h1>
+                                    <div className="flex flex-col gap-10">
+                                        <div className="flex flex-wrap justify-center gap-2 mt-4 md:justify-normal md:max-w-80">
+                                            {stack.map(item => {
+                                                return (
+                                                    <div key={item.id} className="flex items-center gap-2 px-2 text-sm rounded bg-primary-800 ">
+                                                        <Icon icon={item.attributes.name} size={12} />
+                                                        <p>{item.attributes.name}</p>
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="grid justify-center gap-2 md:justify-normal">
                                     {project.links.data.map((link) => (
@@ -51,8 +54,10 @@ const MainLayout = () => {
                             </div>
                             :
                             <div>
-                                <p className="mt-3 overflow-hidden text-lg text-primary-default">I Build Full Stack Web Applications.</p>
-                                <div className="flex justify-center gap-2 mt-4 md:justify-start">
+                            <h1 className="text-6xl font-bold font-heading text-primary-default md:text-4xl">{title}</h1>
+                            <div>
+                                <p className="mt-3 overflow-hidden text-base text-secondary-default font-heading">I Build Full Stack Web Applications.</p>
+                                <div className="flex flex-col justify-center gap-2 mt-4 lg:flex-row md:justify-start">
                                     <button onClick={() => setOpenModal(true)} className="px-8 py-2.5 text-sm rounded shadow-xl bg-secondary-default hover:bg-secondary-500">Contact Me</button>
                                     <button className="px-8 py-2.5  text-sm rounded text-background-default bg-primary-default hover:shadow-primary-default hover:shadow-2xl">Download CV</button>
                                 </div>
@@ -93,14 +98,14 @@ const MainLayout = () => {
                                     </a>
                                 </div>
                             </div>
+                            </div>
                             }
-                        </div>
                     </header>
                     <main className="flex flex-col *:px-[1.5rem] gap-40 mt-10 text-sm md:w-3/4 md:flex-1 md:text-left text-text-default">
                         <Outlet />
                     </main>
                 </div>
-            </div>
+                </div>
         </div>
     )
 }

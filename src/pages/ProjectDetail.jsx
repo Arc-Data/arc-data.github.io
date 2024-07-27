@@ -7,14 +7,14 @@ import { BlocksRenderer } from "@strapi/blocks-react-renderer"
 import { BsImage } from "react-icons/bs"
 
 const blocks = {
-    paragraph: ({ children }) => <p className="text-sm leading-7 text-justify md:text-md md:leading-loose indent-8">{children}</p>,
-    heading: ({ children }) => <h2 className="my-4 text-2xl text-bold">{children}</h2>,
+    paragraph: ({ children }) => <p className="text-sm leading-5 text-justify md:text-base md:leading-loose indent-8">{children}</p>,
+    heading: ({ children }) => <h2 className="my-4 text-2xl font-heading text-bold">{children}</h2>,
     list: ({children, format }) => {
         switch(format) {
             case 'unordered':
-                return <ul className="ml-8 text-sm leading-7 list-decimal md:leading-loose md:text-md">{children}</ul>
+                return <ul className="ml-8 text-sm leading-5 list-decimal md:leading-loose md:text-base">{children}</ul>
             case 'ordered':
-                return <ol className="ml-8 text-sm leading-7 list-disc md:leading-loose md:text-md">{children}</ol>
+                return <ol className="ml-8 text-sm leading-5 list-disc md:leading-loose md:text-base">{children}</ol>
         }
     }
 }
@@ -70,7 +70,8 @@ const ProjectDetail = () => {
                 />
                 <BlocksRenderer 
                     blocks={blocks}
-                    content={project.description}/>
+                    content={project.description}
+                    />
             </div>
             }
             

@@ -18,7 +18,7 @@ const FeaturedProject = ({ project }) => {
 			className="object-cover border-2 border-gray-300 rounded group-hover:border-cyan-500"
 			/>
 		</div>
-		<div className="col-span-3 leading-8 text-md md:col-span-2">
+		<div className="col-span-3 text-sm leading-6 md:leading-8 md:text-base md:col-span-2">
 			<h2 className="text-lg font-medium text-center group-hover:text-primary-default md:text-left">{project.attributes.title}</h2>
 			<p className="mt-2 text-md">{project.attributes.summary}</p>
 			<div className="flex flex-wrap justify-center gap-2 mt-4 md:justify-start">
