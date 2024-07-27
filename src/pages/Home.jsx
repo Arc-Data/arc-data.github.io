@@ -149,6 +149,8 @@ const Home = () => {
             <div className="py-10">
                 <h2 className="text-xl font-bold text-center uppercase md:text-left text-text-800">Developer History</h2>
                 <Timeline className="my-10">
+                    
+                    
                     <Timeline.Item>
                         <Timeline.Point />
                         <Timeline.Content>
@@ -156,12 +158,76 @@ const Home = () => {
                         <div className="px-4 mt-4 border border-gray-800 border-dashed rounded"> 
                             <Timeline.Title className="my-4 text-primary-default">Web Developer Intern at Lamina Studios</Timeline.Title>
                             <Timeline.Body>
-                                Contributed in the making of a Logistics Management System. Designed the initial database structure as well as its authentication features using Vue + Laravel
+                                <div>Learned more about projects from a real world perspective. Picked up Laravel and Vue</div>
+                                <div className="p-4 mt-4">
+                                    <Timeline className="mt-4">
+
+                                        <Timeline.Item>
+                                            <Timeline.Point />
+                                            <Timeline.Content >
+                                                <Timeline.Time>May - July 2024</Timeline.Time>
+                                                <div className="p-4 my-4 border border-gray-800 border-dashed rounded">
+                                                    <Timeline.Title className="my-4 text-primary-default">Logistics System</Timeline.Title>
+                                                    <Timeline.Body className="space-y-8">
+                                                        <div>Worked on a company project involving truck logistics. Heavily involved with the initial database structure as well as authentication related functions.</div>
+                                                        <p className="text-lg text-secondary-default">Key Experiences</p>
+                                                        <div className="px-4 space-y-2 list-disc">
+                                                            <li>Collaborated with other interns for the initial database structure</li>
+                                                            <li>Heavily involved in managing authentication between differing user types, as well as using experience with tools from past projects to create a better user experience.</li>
+                                                        </div>
+                                                    </Timeline.Body>
+                                                </div>
+                                            </Timeline.Content>
+                                        </Timeline.Item>
+
+                                        <Timeline.Item>
+                                            <Timeline.Point />
+                                            <Timeline.Content >
+                                                <Timeline.Time>May 2024</Timeline.Time>
+                                                <div className="p-4 my-4 border border-gray-800 border-dashed rounded">
+                                                    <Timeline.Title className="my-4 text-primary-default">To Do List - Vue</Timeline.Title>
+                                                    <Timeline.Body className="space-y-8">
+                                                        <div>Built a basic to-do list app in order to learn Vue and learned about theme switching using color palettes from RealTime Colors</div>
+                                                        <p className="text-lg text-secondary-default">Key Experiences</p>
+                                                        <div className="px-4 space-y-2 list-disc">
+                                                            <li>Picked up Vue for the first time.</li>
+                                                            <li>Managed authentication contexts using Pinia.</li>
+                                                            <li>Utilized RealTime Colors and Tailwind CSS to implement dark and light mode theme switches</li>
+                                                        </div>
+                                                    </Timeline.Body>
+                                                </div>
+                                            </Timeline.Content>
+                                        </Timeline.Item>
+
+
+                                        <Timeline.Item>
+                                            <Timeline.Point />
+                                            <Timeline.Content >
+                                                <Timeline.Time>April - May 2024</Timeline.Time>
+                                                <div className="p-4 my-4 border border-gray-800 border-dashed rounded">
+                                                    <Timeline.Title className="my-4 text-primary-default">WriteUps</Timeline.Title>
+                                                    <Timeline.Body className="space-y-8">
+                                                        <div>Built a Social Media Website to learn the basics of Laravel. Also learned about Realtime Notifications using Pusher API and utilizing Flowbite designs for better user interfaces. </div>
+                                                        <p className="text-lg text-secondary-default">Key Experiences</p>
+                                                        <div className="px-4 space-y-2 list-disc">
+                                                            <li>Picked up Laravel for the first time.</li>
+                                                            <li>Actively used TailwindCSS for making responsive content.</li>
+                                                            <li>Learned about realtime notifications using Pusher API.</li>
+                                                            <li>Used Flowbite designs and RealTime Colors website as a guide for creating better user interfaces.</li>
+                                                        </div>
+                                                    </Timeline.Body>
+                                                </div>
+                                            </Timeline.Content>
+                                        </Timeline.Item>
+
+                                        
+                                    </Timeline>                                    
+                                </div>
                             </Timeline.Body>
                         </div>
                         </Timeline.Content>
                     </Timeline.Item>
-                    <Timeline.Item>
+                    {/* <Timeline.Item>
                         <Timeline.Point />
                         <Timeline.Content>
                         <Timeline.Time>April 2024</Timeline.Time>
@@ -172,18 +238,25 @@ const Home = () => {
                             </Timeline.Body>
                         </div>
                         </Timeline.Content>
-                    </Timeline.Item>
+                    </Timeline.Item> */}
 
                     <Timeline.Item>
                         <Timeline.Point />
                         <Timeline.Content>
-                        <Timeline.Time>March 2024</Timeline.Time>
+                        <Timeline.Time>May 2023 - March 2024</Timeline.Time>
                         <div className="px-4 mt-4 border border-gray-800 border-dashed rounded"> 
                             <Timeline.Title className="my-4 text-primary-default">CebuRoute</Timeline.Title>
-                            <Timeline.Body>
+                            <Timeline.Body className="space-y-8">
                                 <p className="">
                                 Technical Lead for a Capstone Project involving an Itinerary Recommendation System. Learned more about content-based filtering recommendation systems, as well as first real experience with deployment services and first real big project in React. 
                                 </p>
+                                <p className="text-lg text-secondary-default">Key Experiences</p>
+                                <div className="px-4 space-y-2 list-disc">
+                                    <li>Taught groupmates to use Git and Github in order to collaborate code assignments. Gained more experience managing project repositories.</li>
+                                    <li>Researched about content-based filtering systems and devised algorithms for different kinds of recommendation contexts.</li>
+                                    <li>Implemented OpenStreetMap API for added visual representation for selected locations.</li>
+                                    <li>First experience with deploying client and server web services.</li>
+                                </div>
                             </Timeline.Body>
                         </div>
                         </Timeline.Content>

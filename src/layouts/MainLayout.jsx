@@ -15,7 +15,7 @@ const MainLayout = () => {
 
     return (
         <div>
-            <div className="fixed flex w-full py-4 border-b border-background-900 z-1 bg-background-default">
+            <div className="fixed z-10 flex w-full py-4 border-b border-background-900 bg-background-default">
                 <div className="container flex justify-center max-w-6xl gap-8 mx-auto text-sm md:justify-normal ">
                     <Link to="/" className="md:ml-auto">Home</Link>
                     <div>Projects</div>
