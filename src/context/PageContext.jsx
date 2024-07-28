@@ -36,7 +36,6 @@ export const PageProvider = ({ children }) => {
         setTitle("Arc")
         setSubtitle("I Build Full Stack Web Apps")
         setShowStack(false)
-        setLoading(false)
     }
 
     const contextData = {

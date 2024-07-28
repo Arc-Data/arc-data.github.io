@@ -11,6 +11,7 @@ const Home = () => {
     const { defaultScreenDetails, loading, setLoading } = useContext(PageContext)
 
     useEffect(() => {
+        setLoading(true)
         const fetchArticles = async () => {
             try {
                 const response = await strapi.get('api/projects?populate=*&IsFeatured=true')

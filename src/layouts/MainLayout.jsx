@@ -11,9 +11,8 @@ import { MdOutlineArrowBackIosNew } from "react-icons/md"
 
 dayjs.extend(RelativeTime)
 const MainLayout = () => {
-    const { project, title, stack, showStack, loading, setLoading } = useContext(PageContext)
+    const { project, title, stack, showStack, loading } = useContext(PageContext)
     const [ openModal, setOpenModal ] = useState(false)
-
 
     return (
         <div>
