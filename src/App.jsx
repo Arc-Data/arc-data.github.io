@@ -3,10 +3,12 @@ import Home from './pages/Home'
 import ProjectDetail from "./pages/ProjectDetail"
 import MainLayout from "./layouts/MainLayout"
 import { PageProvider } from "./context/PageContext"
+import ScrollToTop from "./components/ScrollToTop"
 
 function App() {
 	return (
 		<HashRouter>
+		<ScrollToTop/>
 		<PageProvider>
 			<Routes>
 				<Route element={<MainLayout />}>

@@ -20,12 +20,13 @@ const blocks = {
 }
 
 const ProjectDetail = () => {
-    const [loading, setLoading] = useState(true)
+    const { loading, setLoading } = useContext(PageContext)
     const { id } = useParams()
 
     const { project, setProject, showProjectDetails } = useContext(PageContext)
 
     useEffect(() => {
+        setLoading(true)
         const fetchProject = async () => {
             try {
                 const response = await strapi.get(`/api/projects/${id}?populate=*`)
@@ -34,7 +35,8 @@ const ProjectDetail = () => {
             } catch (error) {
                 console.log("An error occurred: ", error)
             } finally {
-                setLoading(false)
+                console.log("This should happen")
+                // setLoading(false)
             }
         }
 
@@ -43,13 +45,12 @@ const ProjectDetail = () => {
 
 
     return (
-        <div>
+        <div className="pb-40">
             { loading ? 
             <div className="grid w-full mt-8 animate-pulse">
                 <div className="grid w-full h-96 place-items-center bg-background-800 ">
                     <BsImage size={32}/>
                 </div>  
-                {/* <div className="w-64 h-8 mt-4 bg-background-800 "></div> */}
                 <div className="w-full h-4 mt-12 ml-8 rounded-lg bg-background-800 "></div>
                 <div className="w-full h-4 mt-4 rounded-lg bg-background-800 "></div>
                 <div className="w-full h-4 mt-4 rounded-lg bg-background-800 "></div>

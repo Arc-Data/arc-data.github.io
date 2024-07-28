@@ -41,7 +41,8 @@ export const PageProvider = ({ children }) => {
         defaultScreenDetails,
         project,
         setProject,
-        loading
+        loading,
+        setLoading
     }
 
     return (
