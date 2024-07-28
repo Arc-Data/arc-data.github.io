@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react"
+import strapi from "../utils/strapi"
 
 const PageContext = createContext()
 
@@ -12,16 +13,26 @@ export const PageProvider = ({ children }) => {
     const [ stack, setStack ] = useState([])
     const [ loading, setLoading ] = useState(true)
 
+
+    const getProjectDetails = async (id) => {
+        try {
+            const response = await strapi.get(`/api/projects/${id}?populate=*`)
+            setProject(response.data.data.attributes)
+            showProjectDetails(response.data.data.attributes)
+        } catch (error) {
+            console.log("An error occurred: ", error)
+        } finally { 
+            setLoading(false)
+        }
+    }
+
     const showProjectDetails = (project) => {
-        setLoading(true)
         setTitle(project.title)
         setStack(project.technologies.data)
         setShowStack(true)
-        setLoading(false)
     }
 
     const defaultScreenDetails = () => {
-        setLoading(true)
         setTitle("Arc")
         setSubtitle("I Build Full Stack Web Apps")
         setShowStack(false)
@@ -42,7 +53,8 @@ export const PageProvider = ({ children }) => {
         project,
         setProject,
         loading,
-        setLoading
+        setLoading,
+        getProjectDetails
     }
 
     return (

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Link, Outlet } from "react-router-dom"
 import PageContext from "../context/PageContext"
 import dayjs from "dayjs"
@@ -11,13 +11,13 @@ import { MdOutlineArrowBackIosNew } from "react-icons/md"
 
 dayjs.extend(RelativeTime)
 const MainLayout = () => {
-    const { project, title, stack, showStack, loading } = useContext(PageContext)
+    const { project, title, stack, showStack, loading, setLoading } = useContext(PageContext)
     const [ openModal, setOpenModal ] = useState(false)
+
 
     return (
         <div>
             <div className="fixed z-10 flex w-full p-6 border-b border-background-900 bg-background-default"></div>
-            
             <div className="max-w-screen-xl min-h-screen px-0 py-4 mx-auto text-white md:px-12 md:pt-20 sm:text-center md:text-left">
                 <div className="md:flex md:justify-between md:gap-20">
                     {loading ? 

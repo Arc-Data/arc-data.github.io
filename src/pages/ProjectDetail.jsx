@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
-import strapi from "../utils/strapi"
 import { Spinner } from "flowbite-react"
 import PageContext from "../context/PageContext"
 import { BlocksRenderer } from "@strapi/blocks-react-renderer"
@@ -20,27 +19,12 @@ const blocks = {
 }
 
 const ProjectDetail = () => {
-    const { loading, setLoading } = useContext(PageContext)
+    const { loading, project, getProjectDetails, setLoading} = useContext(PageContext)
     const { id } = useParams()
-
-    const { project, setProject, showProjectDetails } = useContext(PageContext)
 
     useEffect(() => {
         setLoading(true)
-        const fetchProject = async () => {
-            try {
-                const response = await strapi.get(`/api/projects/${id}?populate=*`)
-                setProject(response.data.data.attributes)
-                showProjectDetails(response.data.data.attributes)
-            } catch (error) {
-                console.log("An error occurred: ", error)
-            } finally {
-                console.log("This should happen")
-                // setLoading(false)
-            }
-        }
-
-        fetchProject()
+        getProjectDetails(id)
     }, [id])
 
 
@@ -71,7 +55,7 @@ const ProjectDetail = () => {
                 />
                 <BlocksRenderer 
                     blocks={blocks}
-                    content={project.description}
+                    content={project?.description || []}
                     />
             </div>
             }
