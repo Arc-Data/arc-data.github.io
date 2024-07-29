@@ -110,6 +110,9 @@ const AboutMe = () => {
             </p>       
             <p className="mx-auto mt-3 text-sm leading-8 text-justify indent-8 md:max-w-full md:px-0 md:leading-8 md:text-base ">
                 Fast forward onto college, I aspired to be the type of person to turn ideas into realities, mundane processes to efficient approaches and with a passion to ensure that everything that I work on will succeed. My primary goal is to ensure that I will always be ready to create "The Website" that someone or everyone wants or needs.
+            </p>
+            <p className="mx-auto mt-3 text-sm leading-8 text-justify indent-8 md:max-w-full md:px-0 md:leading-8 md:text-base ">
+                Outside of programming, I'm slowly learning Nihongo in order to find a way to support my favorite authors and creators. 
             </p>                
             </>
             :
@@ -191,6 +194,9 @@ const AboutMe = () => {
                     <p>Vue</p>
                 </div>
             </div>
+            <p className="mx-auto mt-3 text-sm leading-8 text-justify indent-8 md:max-w-full md:px-0 md:leading-8 md:text-base ">
+                I like the whole process of learning to make an idea appear out of a white screen. I also liked knowing how a piece of code could potentially drastically improve a website's performance. Making processes more intuitive and efficient, and the never-ending quest to learn and adapt to the technological landscape, also fits with my idea of fun!  
+            </p>
             </>
             }
             
