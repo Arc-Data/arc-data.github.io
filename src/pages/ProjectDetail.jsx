@@ -19,12 +19,11 @@ const blocks = {
 }
 
 const ProjectDetail = () => {
-    const { loading, project, getProjectDetails, setLoading} = useContext(PageContext)
+    const { project, loading, fetchProject } = useContext(PageContext)
     const { id } = useParams()
 
     useEffect(() => {
-        setLoading(true)
-        getProjectDetails(id)
+        fetchProject(id)
     }, [id])
 
 

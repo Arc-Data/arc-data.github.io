@@ -6,19 +6,16 @@ const PageContext = createContext()
 export default PageContext
 
 export const PageProvider = ({ children }) => {
-    const [ title, setTitle ] = useState("Arc")
-    const [ subtitle, setSubtitle ] = useState("I Build Full Stack Web Applications")
-    const [ showStack, setShowStack ] = useState(false)
     const [ project, setProject ] = useState()
-    const [ stack, setStack ] = useState([])
+    const [ showStack, setShowStack ] = useState(false)
     const [ loading, setLoading ] = useState(true)
 
-
-    const getProjectDetails = async (id) => {
+    const fetchProject = async (id) => {
+        setLoading(true)
+        setShowStack(true)
         try {
             const response = await strapi.get(`/api/projects/${id}?populate=*`)
             setProject(response.data.data.attributes)
-            showProjectDetails(response.data.data.attributes)
         } catch (error) {
             console.log("An error occurred: ", error)
         } finally { 
@@ -26,34 +23,13 @@ export const PageProvider = ({ children }) => {
         }
     }
 
-    const showProjectDetails = (project) => {
-        setTitle(project.title)
-        setStack(project.technologies.data)
-        setShowStack(true)
-    }
-
-    const defaultScreenDetails = () => {
-        setTitle("Arc")
-        setSubtitle("I Build Full Stack Web Apps")
-        setShowStack(false)
-    }
-
     const contextData = {
-        title,
-        setTitle,
-        subtitle, 
-        setSubtitle,
-        stack,
-        setStack,
         showStack, 
         setShowStack,
-        showProjectDetails,
-        defaultScreenDetails,
-        project,
-        setProject,
         loading,
         setLoading,
-        getProjectDetails
+        project,
+        fetchProject
     }
 
     return (

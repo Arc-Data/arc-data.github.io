@@ -8,9 +8,10 @@ import AboutMe from "../components/AboutMe"
 
 const Home = () => {
     const [ projects, setProjects ] = useState([])
-    const { defaultScreenDetails, loading, setLoading } = useContext(PageContext)
+    const { setShowStack, loading, setLoading } = useContext(PageContext)
 
     useEffect(() => {
+        setShowStack(false)
         setLoading(true)
         const fetchArticles = async () => {
             try {
@@ -24,7 +25,6 @@ const Home = () => {
                 setLoading(false)
             }
         }
-        defaultScreenDetails()
         fetchArticles()
     }, [])
 
