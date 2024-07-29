@@ -49,6 +49,7 @@ const AboutMe = () => {
                 <Dropdown label={textVersion} theme={dropDownTheme} color="blue" >
                     <Dropdown.Item onClick={() => setTextVersion("Summarized")}>Summarized</Dropdown.Item>
                     <Dropdown.Item onClick={() => setTextVersion("Technical")}>Technical</Dropdown.Item>
+                    <Dropdown.Item onClick={() => setTextVersion("Personal")}>Personal</Dropdown.Item>
                 </Dropdown>
             </div>
             {textVersion === "Summarized" ? 
@@ -95,6 +96,21 @@ const AboutMe = () => {
             <p className="mx-auto mt-3 text-sm leading-8 text-justify md:px-0 md:max-w-full md:leading-8 md:text-base indent-8">
                 Outside of programming, I'm quite the reader and a Japanese media enthusiast. Plays a bit of DOTA and learns a bit of Nihongo on the side!
             </p>
+            </>
+            :
+            textVersion === "Personal"
+            ?
+            <>
+            <p className="mx-auto mt-3 text-sm leading-8 text-justify indent-8 md:max-w-full md:px-0 md:leading-8 md:text-base ">
+                Early life, I was a bit of a casual gamer, bits of introversion and with some kind of interest in writing. I was the type to ponder over numbers displayed on a character's skill (yes I played DOTA) and watched alot of anime. 
+            </p>            
+            <p className="mx-auto mt-3 text-sm leading-8 text-justify indent-8 md:max-w-full md:px-0 md:leading-8 md:text-base ">
+                My passion for programming started around 4th year of high school, where I stumbled upon an anime where the main character (a high school game developer wannabee) collaborates with fellow members with different specialties (voice actress, artist, script writers, animation) in order to produce a game program. I thought that it was a really wonderful thing to 
+                collaborate with others who might not share the same knowledge as you but share the same goal. Over the natural course of high school curriculum, we stumbled upon web development and found myself enthusiastic over the fact that there exists a future job where I can nerd out with the intricacies of making something appear out of a white screen.
+            </p>       
+            <p className="mx-auto mt-3 text-sm leading-8 text-justify indent-8 md:max-w-full md:px-0 md:leading-8 md:text-base ">
+                Fast forward onto college, I aspired to be the type of person to turn ideas into realities, mundane processes to efficient approaches and with a passion to ensure that everything that I work on will succeed. My primary goal is to ensure that I will always be ready to create "The Website" that someone or everyone wants or needs.
+            </p>                
             </>
             :
             <>
