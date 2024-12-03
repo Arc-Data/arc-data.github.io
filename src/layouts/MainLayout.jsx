@@ -85,7 +85,7 @@ const MainLayout = () => {
                                 <p className="mt-3 overflow-hidden text-base text-secondary-default font-heading">I Build Full Stack Web Applications.</p>
                                 <div className="flex flex-col justify-center gap-2 mt-4 lg:flex-row md:justify-start">
                                     <button onClick={() => setOpenModal(true)} className="px-8 py-2.5 text-sm rounded shadow-xl bg-secondary-default hover:bg-secondary-500">Contact Me</button>
-                                    <button className="px-8 py-2.5  text-sm rounded text-background-default bg-primary-default hover:shadow-primary-default hover:shadow-2xl">Download CV</button>
+                                    {/* <button className="px-8 py-2.5  text-sm rounded text-background-default bg-primary-default hover:shadow-primary-default hover:shadow-2xl">Download CV</button> */}
                                 </div>
                                 <Modal dismissible size={'4xl'} show={openModal} onClose={() => setOpenModal(false)}>
                                     <Modal.Header className="border-none bg-background-800">
