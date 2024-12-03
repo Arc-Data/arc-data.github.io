@@ -1,7 +1,6 @@
-import { SiCss3, SiGithub, SiJavascript, SiTailwindcss } from "react-icons/si"
+import { SiCsharp, SiCss3, SiDotnet, SiGithub, SiJavascript, SiTailwindcss } from "react-icons/si"
 import {  DiDjango,  DiFirebase,  DiHtml5, DiJavascript, DiLaravel, DiMongodb, DiPython, DiReact } from "react-icons/di"
 import { FaReact, FaVuejs } from "react-icons/fa"
-import { BiCaretRight } from "react-icons/bi"
 import { useState } from "react"
 import { Dropdown } from "flowbite-react"
 import { RiFirebaseFill } from "react-icons/ri"
@@ -56,7 +55,8 @@ const AboutMe = () => {
             <>
             <p className="mx-auto mt-3 text-sm leading-8 text-justify indent-8 md:max-w-full md:px-0 md:leading-8 md:text-base ">
                 <span className="text-lg text-accent-default">Approach problem-solving </span>with <span className="text-lg text-accent-default">enthusiasm</span> and <span className="text-lg text-accent-default">passion! </span>  
-                I like building web technologies with the intention of being able to see myself as a fan or a consumer of it. <span className="text-lg text-accent-default">No cutting corners</span>, and aim to <span className="text-lg text-accent-default">deliver the best website experience possible</span>.  
+                I like building web technologies with the intention of being able to see myself as a fan or a consumer of it. <span className="text-lg text-accent-default">No cutting corners</span>, and aim to <span className="text-lg text-accent-default">deliver the best website experience possible</span>. I build applications 
+                because I love the feeling of looking forward to something, whether its watching myself grow better over time, or whether its me potentially <span className="text-lg text-accent-default"> creating applications that help people look forward to the future.</span>
                 {/* see web development as a field that lets me leverage and apply my passion for learning almost immediately. I am incredibly confident in my skills at the following:     */}
             </p>
             <div className="grid justify-between grid-cols-4 gap-2">
@@ -87,6 +87,13 @@ const AboutMe = () => {
                 <div className="flex flex-col gap-2 p-2 text-sm rounded place-items-center">
                     <DiLaravel size={24}/>
                     <p>Laravel</p>
+                </div><div className="flex flex-col gap-2 p-2 text-sm rounded place-items-center">
+                    <SiCsharp size={24}/>
+                    <p>c#</p>
+                </div>
+                <div className="flex flex-col gap-2 p-2 text-sm rounded place-items-center">
+                    <SiDotnet size={24}/>
+                    <p>.Net Framework</p>
                 </div>
                 <div className="flex flex-col gap-2 p-2 text-sm rounded place-items-center">
                     <SiGithub size={24}/>
@@ -159,6 +166,22 @@ const AboutMe = () => {
                     <p>Github</p>
                 </div>
             </div>
+            <p className="mx-auto mt-3 text-sm leading-8 text-justify indent-8 md:max-w-full md:px-0 md:leading-8 md:text-base ">
+                I am currently working/learning more about
+            </p>
+            <div className="flex gap-2 justify-evenly">
+                <div className="flex flex-col gap-2 p-2 text-xs rounded place-items-center">
+                    <SiCsharp size={24}/>
+                    <p>C#</p>
+                </div>
+                
+                <div className="flex flex-col gap-2 p-2 text-sm rounded place-items-center">
+                    <SiDotnet size={24}/>
+                    <p>.NET</p>
+                </div>
+                
+            </div>
+            
             <p className="mx-auto mt-3 text-sm leading-8 text-justify indent-8 md:max-w-full md:px-0 md:leading-8 md:text-base ">
                 And in terms of programming language fundamentals, The ones I used a lot were
             </p>

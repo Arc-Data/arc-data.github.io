@@ -15,7 +15,7 @@ const Home = () => {
         setLoading(true)
         const fetchArticles = async () => {
             try {
-                const response = await strapi.get('api/projects?populate=*&IsFeatured=true')
+                const response = await strapi.get('api/projects?populate=*&IsFeatured=true&sort=createdAt:desc')
                 setProjects(response.data.data)
             }
             catch(error) {
@@ -93,6 +93,26 @@ const Home = () => {
             <div className="py-10">
                 <h2 className="text-xl font-bold text-center uppercase md:text-left text-text-800">Developer History</h2>
                 <Timeline className="my-10">
+
+                <Timeline.Item>
+                        <Timeline.Point />
+                        <Timeline.Content>
+                        <Timeline.Time>September 2024 - Present</Timeline.Time>
+                        <div className="px-6 py-8 my-4 border border-gray-800 border-dashed rounded bg-background-900"> 
+                            <Timeline.Title className="my-4 text-base md:text-xl font-heading text-primary-default">ArcClass</Timeline.Title>
+                            <Timeline.Body className="space-y-8 text-sm text-text-default md:text-base">
+                                <p className="">
+                                A self project involving tackling classroom management tools and handling classrooms and schools at an organization level. An ongoing endeavor!
+                                </p>
+                                <p className="text-md text-secondary-default">Key Experiences</p>
+                                <ul className="px-4 space-y-2 list-disc">
+                                    <li>Leveraging shadcn for creating better user experiences.</li>
+                                    <li>Picked up C# and .NET and challenging myself with this new project, keeping the best practices in mind.</li>
+                                </ul>
+                            </Timeline.Body>
+                        </div>
+                        </Timeline.Content>
+                    </Timeline.Item>
                     
                     <Timeline.Item >
                         <Timeline.Point/>
@@ -192,7 +212,7 @@ const Home = () => {
                         </div>
                         </Timeline.Content>
                     </Timeline.Item>
-                    </Timeline>
+                </Timeline>
             </div>
             </>
     )

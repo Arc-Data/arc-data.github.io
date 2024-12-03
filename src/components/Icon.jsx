@@ -1,8 +1,9 @@
 import { FaGithub, FaLaravel, FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiCloudinary, SiDjango, SiOpenstreetmap, SiPusher, SiRender, SiStrapi } from "react-icons/si";
+import { SiCloudinary, SiCsharp, SiDjango, SiDotnet, SiOpenstreetmap, SiPusher, SiRender, SiStrapi } from "react-icons/si";
 
 const Icon = ({icon, size=24}) => {
+    console.log(icon)
     switch (icon) {
         case 'React': 
             return (<FaReact size={size} aria-label="React"/>)
@@ -24,6 +25,10 @@ const Icon = ({icon, size=24}) => {
             return (<SiOpenstreetmap size={size} />)
         case 'Pusher':
             return (<SiPusher size={size} />)
+        case 'C#':
+            return (<SiCsharp size={size} />)
+        case '.NET':
+            return (<SiDotnet size={size} />)
         default:
             return (<FaReact size={size}/>)
     }
